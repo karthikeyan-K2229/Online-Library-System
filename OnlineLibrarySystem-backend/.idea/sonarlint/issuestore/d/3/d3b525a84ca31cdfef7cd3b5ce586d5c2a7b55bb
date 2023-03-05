@@ -1,0 +1,28 @@
+
+[	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(²ïığ
+b	java:S112K"FDefine and throw a dedicated exception instead of using a generic one.(óŸî8¯˜Äğº0
+E
+java:S3740)"/Provide the parametrized type for this generic.(õÉ§
+t
+java:S2293%"YReplace the type specification in this constructor call with the diamond operator ("<>").(øõ¤©ıÿÿÿÿ
+t
+java:S22931"YReplace the type specification in this constructor call with the diamond operator ("<>").(ì¯Æ¾ùÿÿÿÿ
+o
+java:S22938"YReplace the type specification in this constructor call with the diamond operator ("<>").(©ù˜¹
+o
+java:S2293F"YReplace the type specification in this constructor call with the diamond operator ("<>").(©ù˜¹
+u
+java:S2293P"YReplace the type specification in this constructor call with the diamond operator ("<>").(ªÛµl8¿˜Äğº0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(™ô¹ôşÿÿÿÿ
+V
+java:S1854$";Remove this useless assignment to local variable "userobj".(ÚˆÚüÿÿÿÿ
+[
+java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(À½şÿÿÿÿ
+B
+java:S1481",Remove this unused "userobj" local variable.(·Ú‚Ÿ
+V
+java:S4684C"@Replace this persistent entity with a simple POJO or DTO object.(¦×Â
+‰
+java:S1130K"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(óŸî8ëšÄğº0
+a
+java:S1128"KRemove this unused import 'com.project.onlineLibrary.entity.LoginRegister'.(ÃÈ±±

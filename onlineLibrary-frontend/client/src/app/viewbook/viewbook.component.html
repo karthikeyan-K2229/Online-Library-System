@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<div class="sidebar-container">
+    <ul class="sidebar-navigation">
+      
+        <div class="card" style="width:235px; background-color:  #6017b4;;">
+            <div id="userimg" style="width:150px;">
+            <img [src]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBAVVr6uAc3yUTAs2wH0JOo0gN5lN_UVDZ3A&usqp=CAU'" alt="Card image" style="width:100%; margin-left: 20%; margin-top: 10%;">
+            </div>
+            <div style="margin-left: auto; margin-right: auto;"  class="card-body">
+              <h4 style="font-weight: bolder;" class="card-title"></h4>
+            </div>
+          </div>
+          <li>
+            <i class="fa fa-check-square" aria-hidden="true"></i> <label [routerLink]="['/admindashboard']" style="cursor: pointer;">DashBoard</label>
+         </li>
+      <li>
+         <i class="fa fa-plus" aria-hidden="true"></i> <label [routerLink]="['/addbook']" style="cursor: pointer;">Add Book</label>
+      </li>
+      <li>
+        <i  class="fa fa-list" aria-hidden="true"></i> <label [routerLink]="['/viewbook']" style="cursor: pointer;">View Books</label>
+     </li>
+     <li>
+      <i class="fa fa-book" aria-hidden="true"></i> <label [routerLink]="['/updatebook']" style="cursor: pointer;">Update Books</label>
+     </li>
+      <li>
+        <i class="fa fa-user" aria-hidden="true"></i> <label [routerLink]="['/viewuser']" style="cursor: pointer;"> View Users</label>
+      </li>
+      <li>
+        <i class="fa fa-list" aria-hidden="true"></i> <label [routerLink]="['/FeedBack']" style="cursor: pointer;">FeedBack</label>
+      </li>
+     
+      
+    </ul>
+  </div>
+  <div class="container">
+    <div class="heading-text"><b> Books </b></div>
+<div class="row">
+    <div  *ngFor="let book of books" class="col-4 card" id="bloodCards">
+        <div class="img-block">
+            
+                <img class="bloodimg" src={{book.imageurl}} width="140" height="150">
+           
+        </div>
+        <div class="card-block">
+            <div class="text"><b style="color: darkred; font-size: large;">Book :</b>{{book.bookname}}</div><br>
+            <div class="text"><b style="color: darkred; font-size: large;">Author:</b>{{book.author}}</div><br>
+  
+            <a href={{book.website}} class="btn btn-primary" target="_blank">Go course</a><br>
+            <br>
+            <br>
+            
+           
+        </div>
+        
+    </div>
+  </div></div>

@@ -1,0 +1,84 @@
+<app-header></app-header>
+
+<div class="sidebar-container">
+    <ul class="sidebar-navigation">
+      
+      <div class="card1" style="width:235px; background-color: #6017b4;">
+        <div id="userimg" style="width:150px;">
+        <img [src]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBAVVr6uAc3yUTAs2wH0JOo0gN5lN_UVDZ3A&usqp=CAU'" alt="Card image" style="width:100%; margin-left: 20%; margin-top: 10%;">
+        </div>
+        <div style="margin-left: auto; margin-right: auto;"  class="card-body">
+          <h4 style="font-weight: bolder;" class="card-title"></h4>
+        </div>
+      </div>
+      <li>
+        <i class="fa fa-check-square" aria-hidden="true"></i> <label [routerLink]="['/admindashboard']" style="cursor: pointer;">DashBoard</label>
+     </li>
+      <li>
+         <i class="fa fa-plus" aria-hidden="true"></i> <label [routerLink]="['/addbook']" style="cursor: pointer;">Add Book</label>
+      </li>
+      <li>
+        <i  class="fa fa-list" aria-hidden="true"></i> <label [routerLink]="['/viewbook']" style="cursor: pointer;">View Books</label>
+     </li>
+     <li>
+      <i class="fa fa-book" aria-hidden="true"></i> <label [routerLink]="['/updatebook']" style="cursor: pointer;">Update Books</label>
+     </li>
+      <li>
+        <i class="fa fa-user" aria-hidden="true"></i> <label [routerLink]="['/viewuser']" style="cursor: pointer;"> View Users</label>
+      </li>
+      <li>
+        <i class="fa fa-list" aria-hidden="true"></i> <label [routerLink]="['/FeedBack']" style="cursor: pointer;">FeedBack</label>
+      </li>
+     
+      
+    </ul>
+  </div>
+  <div class="container">
+    <div class="row">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <div class="card" > 
+      <h3>UPDATE BOOK</h3> 
+      <form [formGroup]="AddBooks"  (ngSubmit)="update()"> 
+   
+        <div class="form-group">
+          <label for="bookname" class="font-weight-bold">Book Name</label>
+          <input type="text" size="50" class="form-control" style="border-radius: 15px;" placeholder="Enter the Book Name" formControlName="bookname" id="bookname" />
+          <div *ngIf="AddBooks.get('bookname').invalid && AddBooks.controls.bookname.touched "
+           class="form-group" class="alert alert-danger">
+          <span class="text-danger" *ngIf="AddBooks.get('bookname').hasError('required')">Book Name is Required !</span>
+          
+           </div>    
+      </div>
+      <div class="form-group">
+        <label for="imageurl" class="font-weight-bold">ImageUrl</label>
+        <input type="text" size="50" class="form-control" style="border-radius: 15px;" placeholder="Enter the ImageUrl" formControlName="imageurl" id="imageurl" />
+        <div *ngIf="AddBooks.get('imageurl').invalid && AddBooks.controls.imageurl.touched "
+         class="form-group" class="alert alert-danger">
+        <span class="text-danger" *ngIf="AddBooks.get('imageurl').hasError('required')">Imageurl is Required !</span>
+        
+         </div>    
+    </div>
+    <div class="form-group">
+      <label for="author" class="font-weight-bold">Author</label>
+      <input type="text" size="50" class="form-control" style="border-radius: 15px;" placeholder="Enter the author" formControlName="author" id="author" />
+      <div *ngIf="AddBooks.get('author').invalid && AddBooks.controls.author.touched "
+       class="form-group" class="alert alert-danger">
+      <span class="text-danger" *ngIf="AddBooks.get('author').hasError('required')">Author Name is Required !</span>
+     
+       </div></div>
+           
+       <div class="form-group">
+        <label for="website" class="font-weight-bold">website</label>
+        <input type="text" size="50" class="form-control" style="border-radius: 15px;" placeholder="Enter the website" formControlName="website" id="website" />
+        <div *ngIf="AddBooks.get('website').invalid && AddBooks.controls.website.touched "
+         class="form-group" class="alert alert-danger">
+        <span class="text-danger" *ngIf="AddBooks.get('website').hasError('required')"> website is Required !</span>
+       
+         </div></div>
+          
+
+         <div class="btn-group" style="margin-left:10 px;">
+          <button class="btn btn-danger btn-block" [disabled]="AddBooks.invalid" style="margin-top: 20px; border-radius:15px; height: 45px;">Send</button>
+          <button class="btn btn-primary btn-block" type="button" style="margin-top: 20px; border-radius: 15px;margin-left: 15%; height: 45px;color:black" routerLink="/updatebook">Back</button>
+         </div></form> </div></div></div>
+  

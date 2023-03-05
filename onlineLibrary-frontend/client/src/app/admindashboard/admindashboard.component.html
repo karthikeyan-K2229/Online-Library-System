@@ -1,0 +1,52 @@
+<app-header></app-header>
+
+<div class="sidebar-container">
+    <ul class="sidebar-navigation">
+      
+      <div class="card" style="width:235px; background-color:  #6017b4;">
+        <div id="userimg" style="width:150px;">
+        <img [src]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBAVVr6uAc3yUTAs2wH0JOo0gN5lN_UVDZ3A&usqp=CAU'" alt="Card image" style="width:100%; margin-left: 20%; margin-top: 10%;">
+        </div>
+        <div style="margin-left: auto; margin-right: auto;"  class="card-body">
+          <h4 style="font-weight: bolder;" class="card-title"></h4>
+        </div>
+      </div>
+      <li>
+        <i class="fa fa-check-square" aria-hidden="true"></i> <label [routerLink]="['/admindashboard']" style="cursor: pointer;">DashBoard</label>
+     </li>
+      <li>
+         <i class="fa fa-plus" aria-hidden="true"></i> <label [routerLink]="['/addbook']" style="cursor: pointer;">Add Book</label>
+      </li>
+      <li>
+        <i  class="fa fa-list" aria-hidden="true"></i> <label [routerLink]="['/viewbook']" style="cursor: pointer;">View Books</label>
+     </li>
+     <li>
+      <i class="fa fa-book" aria-hidden="true"></i> <label [routerLink]="['/updatebook']" style="cursor: pointer;">Update Books</label>
+     </li>
+      <li>
+        <i class="fa fa-user" aria-hidden="true"></i> <label [routerLink]="['/viewuser']" style="cursor: pointer;"> View Users</label>
+      </li>
+      <li>
+        <i class="fa fa-list" aria-hidden="true"></i> <label [routerLink]="['/FeedBack']" style="cursor: pointer;">FeedBack</label>
+      </li>
+     
+      
+    </ul>
+  </div>
+ 
+  <div class="container">
+    <div class="row">
+    <div class="heading-text"><b>Welcome {{name}}</b></div><br><br>
+    <div class="dashboard-card" style="background-color: white; box-shadow: 4px 4px 25px 5px gray;">
+      
+      <div class="texts" style="font-style: italic; font-size:larger;font-weight: bolder; border-radius: 15;" >Users   <i class="fa fa-user" aria-hidden="true"></i></div>
+      <div class="sub-text" *ngFor="let user of users | async"><b style="color: maroon; font-style: italic;font-weight: bolder;">Total Number of Users: {{user}} </b></div>
+    </div><br>
+    <div class="dashboard-card"style="background-color: white; box-shadow: 4px 4px 25px 5px gray;">
+      
+      <div class="texts" style="font-style: italic; font-size:larger;font-weight: bolder;border-radius: 15;">Courses  <i class="fa fa-book" aria-hidden="true"></i></div>
+      <div class="sub-text" *ngFor="let book of Books | async"><b style="color: maroon;font-style: italic;font-weight: bolder;" > Total Number of Books :{{book}}</b></div>
+    </div></div><br><br>
+  </div>
+
+  
